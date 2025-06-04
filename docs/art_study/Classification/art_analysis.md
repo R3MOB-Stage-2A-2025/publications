@@ -13,7 +13,7 @@ It seems to work well. However there are two possible issues:
 Let's consider only the publications that are related to the given themes.
 
 - The classification is only made on the *abstract* of the publication,
-and not on the title or even the keywords that the *Google Scholar* **API**
+and not on the title or even the keywords that the *HAL* **API**
 could give for istance.
 
 I think it could be good if we gave the title, the abstract
