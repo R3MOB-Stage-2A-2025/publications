@@ -31,9 +31,26 @@ Do not use it in a production deployment.
 Use a production WSGI server instead.
 ``` 
 
-It could be useful to integrate the classification code
-into the server implementation.
-Here is the plan on this picture:
+
+So anyway, the current *Flask API* will have to be reworked.
+Here are some ideas:
+
+1. **Use HTTP requests with** ***Flask***. This is easiest way because
+it requires small changes, however this is not designed for that I suppose.
+In fact, the only good way to get a *Flask* server for production is to use
+[***gunicorn***](https://docs.gunicorn.org/).
+
+2. **Use** ***Child Processes*** **in Node.js**.
+Here is a more detailed guide [***right here***](www.delftstack.com/howto/javascript/call-python-from-javascript/).
+
+3. **Use** ***Websocket*** **like** [***Socketio***](https://www.delftstack.com/howto/javascript/call-python-from-javascript/).
+I don't want the *websocket* to require an authentication because it will be
+too hard to code. That's why the client must not have the right to
+communicate with the *websocket*. Only the server should do that.
+So for this method, the server classifies the publication and not the client.
+
+
+For any of these methods, here is the generic plan on this picture:
 
 ![Classification Module](/data/classification_module.png)
 
