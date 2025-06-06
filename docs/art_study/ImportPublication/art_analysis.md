@@ -200,5 +200,14 @@ Besides, it could be possible to retrieve very cool analytics from
 *Semantic Scholar* *API*, such as **themes**,
 and even **AI-generated topics and subthemes**.
 
+## React Component
+
+Here is some inspiration on how to make the research bar.
+
+1. [***Andwebdev***](https://medium.com/@andwebdev/design-and-develop-a-functional-search-bar-in-react-44321ed3c244).
+This one uses **One Query** to get results on the whole web, but the result
+seems nice. However There is a lack of buttons, to use a specific theme
+for instance. Buttons are better than writing text on a phone.
+
 ### EOF
 
