@@ -11,7 +11,7 @@ explains the *best practices* to follow on how to manage an *API* key.
 
 ## What will be used?
 
-Here are a list of *API* that will used:
+Here is a list of *API* that will be used:
 
 1. *Crossref*: This one does not require an *API* key.
 It just encourages us to include our contact information.
@@ -42,7 +42,7 @@ an issue.
 
 Indeed, **Crossref has of a limit of 50 requests per second,
 among 5 concurrent requests**.
-The limit are written in *x-rate-limit-limit* and *x-rate-limit-interval*.
+The limits are written in *x-rate-limit-limit* and *x-rate-limit-interval*.
 
 If the limits are exceeded, a *429 response* will be sent.
 
@@ -59,18 +59,18 @@ The limit is hard to tell because various papers have been written and the
 official doc merely does not provide the actual request rate limit.
 
 It seems that **Semantic Scholar has a limit of 100 requests every 5 minutes,
-per IP address.
+per IP address**.
 
 So I assume that it is possible to bypass the *API* rate providing
 different IP address.
 
 It seems also a good idea not to spam the *API* with too many requests at
-the same time. A *time interval* of *3ms* between each request has been
+the same time. **A time interval of 3ms** between each request has been
 introduced in **2021** by
 [***this article***](https://observablehq.com/@mdeagen/throttled-semantic-scholar).
 
 There is also an equivalent of the cursors for this *API*. It is just
-called **limit**, and the limit can be set by the one who do the request.
+called **limit**, and the limit can be set by the one who does the request.
 Besides, *Semantic Scholar* also introduces the parameter called **offset**.
 This is well explained by
 [***this article***](https://rdrr.io/github/Otoliths/S2miner/man/search_papers.html)
