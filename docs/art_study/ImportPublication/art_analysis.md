@@ -136,7 +136,7 @@ may not be retrieved if the user gives a *DOI*.
 authors.
 
 It is possible to get an *Api key* [__right here__](https://www.semanticscholar.org/product/api).
-Without an *Api key*, the limitation is set to *1,000* requests per seconds.
+Without an *Api key*, the limitation is set to *100* requests every 5minutes.
 However, *Semantic Scholar* does not *crawl/index* for material that is behind a
 *paywall*, [__wikipedia__](https://en.wikipedia.org/wiki/Semantic_Scholar) says.
 
