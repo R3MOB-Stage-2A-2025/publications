@@ -49,6 +49,11 @@ too hard to code. That's why the client must not have the right to
 communicate with the *websocket*. Only the server should do that.
 So for this method, the server classifies the publication and not the client.
 
+Why is it possible to use `flask_socketio` for production? Because the function
+``flask_socketio.SocketIO.run()`` directly calls **python-gevent** or
+**python-eventlet** if it is available, [***the doc***](https://flask-socketio.readthedocs.io/en/latest/deployment.html)
+says.
+
 
 For any of these methods, here is the generic plan on this picture:
 
