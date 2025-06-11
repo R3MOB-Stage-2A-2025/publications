@@ -35,7 +35,7 @@ Use a production WSGI server instead.
 So anyway, the current *Flask API* will have to be reworked.
 Here are some ideas:
 
-1. **Use HTTP requests with** ***Flask***. This is easiest way because
+1. **Use HTTP requests with** ***Flask***. This is the easiest way because
 it requires small changes, however this is not designed for that I suppose.
 In fact, the only good way to get a *Flask* server for production is to use
 [***gunicorn***](https://docs.gunicorn.org/).
