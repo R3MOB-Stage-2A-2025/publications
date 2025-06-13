@@ -1,0 +1,145 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0" version="27.0.4">
+  <diagram name="Page-1" id="gwwkm0NiXWrdUEdysa56">
+    <mxGraphModel dx="1213" dy="672" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-19" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="650" y="60" width="170" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-20" value="Semantic Scholar Client" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="EcsS1EzJX6CtZgbFS-dB-19">
+          <mxGeometry width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-27" value="Socketio (PORT 3312)&lt;br&gt;localhost" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="EcsS1EzJX6CtZgbFS-dB-19">
+          <mxGeometry y="90" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-51" value="- The client is &lt;u&gt;SemanticScholar&lt;/u&gt;&lt;br&gt;( see github.com )" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="EcsS1EzJX6CtZgbFS-dB-19">
+          <mxGeometry x="5" y="30" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-23" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="370" width="170" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-24" value="Crossref Client&lt;br&gt;+ File Parser" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="EcsS1EzJX6CtZgbFS-dB-23">
+          <mxGeometry y="5" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-25" value="&lt;div&gt;Socketio (PORT 3310)&lt;br&gt;alias search.r3mob.fr&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="EcsS1EzJX6CtZgbFS-dB-23">
+          <mxGeometry y="90" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-50" value="&lt;div&gt;- Crossref client is &lt;u&gt;Habanero&lt;/u&gt;&lt;/div&gt;&lt;div&gt;( see github.com )&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="EcsS1EzJX6CtZgbFS-dB-23">
+          <mxGeometry x="5" y="37" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-28" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="60" width="170" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-29" value="Classification Client" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="EcsS1EzJX6CtZgbFS-dB-28">
+          <mxGeometry width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-30" value="Socketio (PORT 3311)&lt;br&gt;localhost" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="EcsS1EzJX6CtZgbFS-dB-28">
+          <mxGeometry y="90" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-57" value="- Keyword analysis&amp;nbsp; TF IDF&lt;br&gt;+ Spacy&lt;br&gt;+ Similarity Cosine" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="EcsS1EzJX6CtZgbFS-dB-28">
+          <mxGeometry x="5" y="30" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-31" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.mac_client;" vertex="1" parent="1">
+          <mxGeometry x="160" y="420" width="210" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-33" value="Web Client (PORT 3000)&lt;br&gt;alias www.r3mob.fr" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="185" y="560" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-8" value="&lt;div&gt;Server (PORT 3301)&lt;br&gt;alias back.r3mob.fr&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="159" y="290" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-7" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" width="400" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-13" value="&lt;div&gt;MySQL&lt;/div&gt;&lt;div&gt;Database&lt;/div&gt;" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="190" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-6" value="&lt;div&gt;TheBrain Client&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;added to the current Javascript code&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="219" y="70" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-34" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="20" y="351" as="sourcePoint" />
+            <mxPoint x="820" y="351" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-35" value="World of the user" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="15" y="355" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-37" value="Backend" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="25" y="320" width="103" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-40" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="419" y="248" as="sourcePoint" />
+            <mxPoint x="419" y="20" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-41" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="252" as="sourcePoint" />
+            <mxPoint x="830" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-42" value="User can&#39;t access these services" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="650" y="220" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-43" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;1&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="60" y="640" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-44" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;2&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="60" y="690" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-45" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;3&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="60" y="740" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-46" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;4&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="60" y="790" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-47" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;The user is connecting.&amp;nbsp;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="109" y="645" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-48" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;The user is importing a publication&lt;/font&gt;." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="107" y="695" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-49" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;The server receives the new publication and stores its metadata&lt;/font&gt;." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="97" y="745" width="539" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-53" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;5&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="60" y="840" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-54" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;The server retrieves analytics and insights and then classify it&lt;/font&gt;." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="104" y="795" width="510" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-55" value="&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;The admin chooses whether the publication will go in the R3MOB brain, using the Admin page on the web client.&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="111" y="847" width="580" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-58" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Protect the API,&lt;br&gt;not to send too many requests&lt;/font&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="490" y="370" width="90" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-59" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;1&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="182" y="462" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-60" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;2&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="600" y="505" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-61" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;3&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="119" y="190" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-62" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;4&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="428" y="204" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-63" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;5&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="170" y="100" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-66" value="Give insights and analytics" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="650" y="187" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EcsS1EzJX6CtZgbFS-dB-67" value="Classificatiion" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="187" width="170" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
