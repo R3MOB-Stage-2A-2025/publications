@@ -200,6 +200,40 @@ Besides, it could be possible to retrieve very cool analytics from
 *Semantic Scholar* *API*, such as **themes**,
 and even **AI-generated topics and subthemes**.
 
+## How to use the Crossref tool
+
+There are multiple implementations that simplify the use of *Crossref API*.
+Here are some examples from [***this website***](https://github.com/CrossRef/rest-api-doc/tree/master):
+
+1. [***Crossref Commons***](https://gitlab.com/crossref/crossref_commons_py):
+it is an official client from *Crossref*, written in *Python*.
+However, it seems designed only for the use of *DOI*s.
+
+2. [***ScienceAI Crossref***](https://github.com/scienceai/crossref):
+it is a *javascript* client. However, it seems very old, and is not official.
+
+3. [***habanero***](https://github.com/sckott/habanero): it is not an official
+client, however it is maintained by something like 12 contributors.
+The repository is well documented, with a lot of stars.
+It is written in *Python*.
+
+4. [***crossrefapi***](https://github.com/fabiobatalha/crossrefapi):
+it is not an official client, however it is maintained by 14 contributors.
+The repository is not as documented as the previous one.
+Besides, it seems to be the choice of the community.
+
+
+The *license* of *crossrefapi* is a *BSD* license. Apparently, this license
+is not compatible with every other licenses, which can create some conflicts
+with other licenses. However, it seems that it can protect developpers, giving
+them some legal protections.
+
+The *license* of *habanero* is a classic *MIT* license, it is compatible
+with the *GNU general public license*, which is one of the most widely used
+open source licenses, [***this article***](https://thisvsthat.io/bsd-license-vs-mit-license) says.
+
+That's why I think I'll choose *habanero* for the *crossref API* client.
+
 ## React Component
 
 Here is some inspiration on how to make the research bar.
