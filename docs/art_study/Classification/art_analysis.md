@@ -97,7 +97,41 @@ kill -9 <app.py pid>
 
 ## My own thoughts about the idea
 
-The solution is good, nothing to add, except there are not enough themes.
+The solution is good, nothing to add.
+
+### Edit from June 23, 2025: Yes, there are enough data
+
+It is possible to retrieve more than one abstract for a given publication.
+Indeed, thanks to *Crossref*, it is possible to recursively retrieve
+publications from the references, or even from the citing publications.
+
+In the current *keyword* based model, the goal is to get a lot of words in the 
+text to classify. **To concatenate abstracts from the publication,
+from the references, titles and container-titles from the references** will
+for sure enhance the classification result. The issue of "not having enough
+data to classify" is not a matter now!
+
+### Edit from June 23, 2025: What to do when the abstract/title is not written in english?
+
+It is not possible to ask *Crossref* to translate the text before sending it
+(unfortunately).
+
+I suppose that this issue is related to the current model based on *keywords*.
+In fact, a *NLP* like *BERT* will not care about the language.
+However, the keywords are from the *spacy* module called `en_core_web_lg`.
+
+It could be possible to install various modules from *spacy*,
+one for each language for instance. This will take a lot of memory.
+This solution could also alterate the *time to classify* a text.
+Furthermore, there will be too many keywords, the classification module will
+flood.
+
+So, my idea is to **temporary** use a *llm*, using an *api key* that will
+translate the text, until the *NLP* method is implemented.
+
+### Edit from June 23, 2025: Adding Cosine Similarity, Results
+
+TODO
 
 ### The different solutions that already exist.
 
@@ -107,8 +141,6 @@ However, it is not that easy.
 In fact, I just need to use **BERT** which is an *NLP model*
 (*+68M monthly downloads*).
 It could be very powerful, more powerful than the current *classification* model.
-
-But the current model from 2024 is good, I don't want to mess with it.
 
 ### EOF
 
