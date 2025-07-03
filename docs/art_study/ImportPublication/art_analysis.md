@@ -234,14 +234,40 @@ open source licenses, [***this article***](https://thisvsthat.io/bsd-license-vs-
 
 That's why I think I'll choose *habanero* for the *crossref API* client.
 
-## React Component
+## How to use Semantic Scholar tool
 
-Here is some inspiration on how to make the research bar.
+There are not a lot a *SemanticScholar* clients. This one
+[***right here***](https://semanticscholar.readthedocs.io/en/stable/),
+called *semanticscholarapi*, with around *400 stars*, is using a *MIT License*.
+Here is the doc for it
+[***right here***](https://semanticscholar.readthedocs.io/en/stable/).
 
-1. [***Andwebdev***](https://medium.com/@andwebdev/design-and-develop-a-functional-search-bar-in-react-44321ed3c244).
-This one uses **One Query** to get results on the whole web, but the result
-seems nice. However There is a lack of buttons, to use a specific theme
-for instance. Buttons are better than writing text on a phone.
+There are so many possibilites with *SemanticScholar*. It is possible
+to generate analytics with
+[***Apache Spark***](https://spark.apache.org/docs/latest/api/python/index.html)
+that is fast and powerful processing engine, explained
+[***right here***](https://www.semanticscholar.org/product/api/tutorial).
+
+Anyway, what I want from *Semantic Scholar* is to give me recommandations,
+number of citations, and keywords from a given publication.
+
+*Semantic Scholar* is based on 3 different *API*s:
+
+1. [***Datasets API***](https://api.semanticscholar.org/api-docs/datasets)
+released in *2022*. It contains *S2AG datasets* with some publications that 
+could contain full parsed text from the publication *PDF*, paper embeddings
+and author attributes,
+[***this article***](https://medium.com/ai2-blog/new-academic-graph-datasets-released-from-semantic-scholar-18b6b3b3140e)
+says.
+
+Anyway, this one is not implemented by *semanticscholarapi*.
+
+2. [***Academic Graph API***](https://api.semanticscholar.org/api-docs/graph).
+It can be used to retrieved some other metadata on a given publication and
+on authors.
+
+3. [***Recommandations API***](https://api.semanticscholar.org/api-docs/recommendations).
+This one gives recommanded papers from a simple positive example paper.
 
 ### EOF
 
