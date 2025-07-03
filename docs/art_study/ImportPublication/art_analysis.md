@@ -245,7 +245,7 @@ Here is the doc for it
 There are so many possibilites with *SemanticScholar*. It is possible
 to generate analytics with
 [***Apache Spark***](https://spark.apache.org/docs/latest/api/python/index.html)
-that is fast and powerful processing engine, explained
+that is a processing engine, explained
 [***right here***](https://www.semanticscholar.org/product/api/tutorial).
 
 Anyway, what I want from *Semantic Scholar* is to give me recommandations,
