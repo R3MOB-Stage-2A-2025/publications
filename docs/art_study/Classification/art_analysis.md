@@ -415,8 +415,8 @@ good classification results?
 
 To train the model, I need a set of *labellised pubications*.
 The former intern started to do that, but only on the abstract,
-and for the **themes**.
-Here are some lines the former dataset:
+and for the **scientific themes**.
+Here are some lines of the former dataset:
 
 ```json
 [
@@ -496,7 +496,7 @@ average performance of *58.80%*.
 The documentation was also good, it recommended to use
 [***sentence-transformers***](https://github.com/UKPLab/sentence-transformers).
 
-I gave almost everything from *Crossref* metadata to the model.
+I gave almost everything of what *Crossref* could find on the publication.
 
 Here is an example of a text to classify using the following format
 ``[title][container-title][reference1-article][reference1-journal]abstract``:
@@ -545,6 +545,32 @@ This way, I can now try to construct the *labellized dataset*.
 However, it will require a *human check* because of the precision.
 Anyway, the precision is already very high, it is hard to get better
 results without training the model.
+
+## Second step: train the TF IDF model
+
+First of all, why *TF IDF*?
+
+*Claude Feldges*, a data scientist, published
+[***right here***](https://medium.com/@claude.feldges/text-classification-with-tf-idf-lstm-bert-a-quantitative-comparison-b8409b556cb3)
+a **performance comparison** on text classification between *TF IDF*, *LSTM* and *BERT*.
+It appears that *TF IDF* is so good with like *97%* precision on his dataset.
+Like he said, `"this classification is a simple problem"`,
+and `"more complex models does not improve accuracy, but costs much more time"`,
+so yeah, I will `"keep it simple"`.
+
+I assume that I just need to follow his masterclass to construct a strong
+*TF IDF* based model. He encourages us to use *logistics regression* as
+the *classifier*.
+I found this work
+[***right here***](https://www.analyticsvidhya.com/blog/2021/09/creating-a-movie-reviews-classifier-using-tf-idf-in-python/)
+that is using *Native Bayes* as a classifier.
+
+I would also like, on my own, to wrap it with *Similarity Cosine*
+just to experiment things.
+
+It could also be necessary to normalize the data. I found this work
+that is doing it well
+[***right here***](https://medium.com/@mifthulyn07/comparing-text-documents-using-tf-idf-and-cosine-similarity-in-python-311863c74b2c).
 
 ### EOF
 
