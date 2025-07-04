@@ -269,5 +269,27 @@ on authors.
 3. [***Recommandations API***](https://api.semanticscholar.org/api-docs/recommendations).
 This one gives recommanded papers from a simple positive example paper.
 
+
+The **recommendations are very great**, it can sometimes display a list
+of more than 100 recommendations with all the raw data possible, including
+4 different publication Ids as *DOI*, **paperId**, etc.. but not *ORCID*! (sad)
+
+*SemanticScholar* is also **better at finding references and citations**.
+Indeed, *Crossref* *facets* are hard to use, here with *SemanticScholar*
+I just need to precise the **paperId**.
+
+Let's talk about the **paperId**. This is wrong!
+Sometimes, I can't retrieve a publication because the *DOI* is not found.
+Indeed, the datasets (**Academic Graph** and **Recommandations API**) are
+using **their own paperId** to identify a research paper. And sometimes, with
+the right *paperId*, I can't even find the publication. It's like, buggy.
+
+
+Anyway, the limit of **100 queries per 5minutes** is also tough. I think
+**SemanticScholar is only useful to get recommendations, and citation papers**.
+I will definitly use it to find recursively as many publications as possible
+to create the labellised dataset, but that's all, **SemanticScholar has
+paywalls too**.
+
 ### EOF
 
