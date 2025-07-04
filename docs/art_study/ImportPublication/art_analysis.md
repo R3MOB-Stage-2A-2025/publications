@@ -234,7 +234,7 @@ open source licenses, [***this article***](https://thisvsthat.io/bsd-license-vs-
 
 That's why I think I'll choose *habanero* for the *crossref API* client.
 
-## How to use Semantic Scholar tool
+## How to use the Semantic Scholar tool
 
 There are not a lot a *SemanticScholar* clients. This one
 [***right here***](https://semanticscholar.readthedocs.io/en/stable/),
@@ -242,7 +242,7 @@ called *semanticscholarapi*, with around *400 stars*, is using a *MIT License*.
 Here is the doc for it
 [***right here***](https://semanticscholar.readthedocs.io/en/stable/).
 
-There are so many possibilites with *SemanticScholar*. It is possible
+There are so many possibilities with *SemanticScholar*. It is possible
 to generate analytics with
 [***Apache Spark***](https://spark.apache.org/docs/latest/api/python/index.html)
 that is a processing engine, explained
