@@ -373,5 +373,54 @@ Go next.
 
 ## How to use the SCOPUS tool
 
+"Scopus is the largest abstract and citations of peer-reviewing literature",
+[***this article***](https://service.elsevier.com/app/answers/detail/a_id/15100/supporthub/scopus/)
+says.
+
+It could solve the issue of *not finding the abstract* with *Crossref*?
+Anyway, I just need *Scopus* to give me a correlation between an author
+and his *ORCID* id.
+
+*Scopus* has its own *ID* for each authors because their are sometimes
+authors with the same name,
+[***this article***](https://service.elsevier.com/app/answers/detail/a_id/11212/c/10546/supporthub/scopus/)
+says.
+
+There is also this tool called **Scopus AI** that can generate summaries
+on an abstract however it is "an add-on subscription".
+[***this article***](https://service.elsevier.com/app/answers/detail/a_id/36844/c/18457/supporthub/scopus/)
+says.
+
+As other *API*'s, there are 2 ways to use it:
+
+- *Non Commercial Users*: everything is accessible except *SciVal*
+and *Embase* *API*'s.
+
+- *Commercial Users*: pay to win mode.
+
+There are actually a lot of accessible data,
+[***this article***](https://dev.elsevier.com/)
+says.
+
+Unfortunately, it will be necessary to ask for an *API* key.
+
+The documentation encourages us to use this *Python* client, called **elapsy**,
+[***right here***](https://github.com/ElsevierDev/elsapy).
+It has a *BSD-3* License, and a lot of stars. However, it seems to be
+a little bit deprecated.
+
+The *README* says to use *Pandas* on *Python 3.6*, however this example
+[***right here***](https://github.com/ElsevierDev/elsapy/blob/master/exampleProg.py)
+is not talking about it. I just hope not to get a version issue.
+
+For the quotas, this website 
+[***right here***](https://service.elsevier.com/app/answers/detail/a_id/34322/supporthub/dataasaservice/p/17729/)
+says that it depends on the service used.
+The reset is every seven days.
+
+### TODO
+
+https://link.springer.com/article/10.1007/s11192-024-05073-5
+
 ### EOF
 
