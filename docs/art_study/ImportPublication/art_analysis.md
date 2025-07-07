@@ -320,8 +320,58 @@ To get the metadata about an author, it is needed to find the *orcid-id*
 related to the author.
 
 I assume that *Crossref* and *SemanticScholar* could help finding this
-*orcid-id*.
+*orcid-id*. It is possible to seach using *Orcid* giving a name and
+a surname however it will require an *ORCID account* to make the search.
 
+The limit for this **OrcidScrapper** *API* is:
+
+- 12 req/sec
+
+- 25k reads/day (IP address)
+
+[***this article***](https://info.orcid.org/ufaqs/what-are-the-api-limits/)
+says.
+
+## How to use the IDREF tool
+
+*ORCID* requires an *orcid-id* to find the author, which could not be found
+using *Crossref*. So it could be useful to use *IDREF*, which is another
+*API* specialized on authors, to get the *orcid-id* of the author.
+
+*IDREF* for **Identifiers and Repositories for Higher Education and Research**
+is a public interface for consulting records produced by member of the
+**French higher education and research documentary networks (Sudoc,
+Calamec, Star)**,
+[***this article***](https://apropos.cairn.info/en/questions-frequentes/a-propos-didref)
+says.
+
+For now, *IDREF* is based on *Solr*,
+[***this article***](https://documentation.abes.fr/aideidrefdeveloppeur/index.html#UtiliserApiSolr)
+says. So yeah, it seems to be quite old.
+
+It is hard to find an *IDREF* client. This is an *API* that is not used very
+often.
+
+By default, the response is in *XML*. To get *JSON*, it is needed to add
+`&wt=json` in the *url*.
+
+I can't find the *request limit rate*.
+
+*Abes* (=*IDREF*),  has been created in *2019*,
+[***this article***](https://abes.fr/reseaux-idref-orcid/le-reseau/)
+says:
+
+> Pour valoriser le corpus des chercheurs, l’identifiant ORCID (Open Researcher and Contributor ID)
+> est devenu la référence depuis plusieurs années. Depuis fin 2019, en relation avec le consortium
+> COUPERIN, l’Abes est co-pilote du consortium ORCID France, regroupant les établissements français
+> désireux d’adhérer aux services payants d’ORCID.
+
+I don't want to use this *API* because there are no clients, the website of
+*Abes* is so old, it seems very vulnerable, and I can't find a *rate limit*.
+*Idref* has been created in *2019*, but the website seems to be from *2002*...
+Go next.
+
+## How to use the SCOPUS tool
 
 ### EOF
 
