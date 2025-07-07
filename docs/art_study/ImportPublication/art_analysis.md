@@ -409,14 +409,31 @@ The documentation encourages us to use this *Python* client, called **elapsy**,
 It has a *BSD-3* License, and a lot of stars. However, it seems to be
 a little bit deprecated.
 
-The *README* says to use *Pandas* on *Python 3.6*, however this example
-[***right here***](https://github.com/ElsevierDev/elsapy/blob/master/exampleProg.py)
-is not talking about it. I just hope not to get a version issue.
-
 For the quotas, this website 
 [***right here***](https://service.elsevier.com/app/answers/detail/a_id/34322/supporthub/dataasaservice/p/17729/)
 says that it depends on the service used.
 The reset is every seven days.
+
+The *README* says to use *Pandas* on *Python 3.6*, however this example
+[***right here***](https://github.com/ElsevierDev/elsapy/blob/master/exampleProg.py)
+is not talking about it. I just hope not to get a version issue.
+
+__Edit__: this client is deprecated, don't use it.
+
+
+I found the python client *API* called **pybliometrics**
+[***right here***](https://github.com/pybliometrics-dev/pybliometrics)
+which is doing the same thing as *Elapsy* and *Elsevier*, but this one
+is not deprecated, and currently has *33 contributors*.
+Moreover, it has an *MIT* license and more stars than *Elapsy*.
+The documentation is
+[***right here***](https://pybliometrics.readthedocs.io/en/stable/)
+.
+
+this doc
+[***right here***](https://my.bioinfo.guru/posts/g_scholar/g_scholar)
+explains how to use *scopus*, it requires a specific configuration file
+and an *API* key. The official documentation is actually very bad.
 
 ### TODO
 
