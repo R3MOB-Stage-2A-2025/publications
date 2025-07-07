@@ -291,5 +291,37 @@ I will definitly use it to find recursively as many publications as possible
 to create the labellised dataset, but that's all, **SemanticScholar has
 paywalls too**.
 
+## How to use the ORCID tool
+
+We talked about finding metadata on a publication.
+**It could also be interesting to find metadata on an author**
+
+This is exactly what *ORCID* is doing, [***right here***](https://orcid.org/).
+
+There are 2 ways of using the *ORCID API*:
+
+- "public": when u have no subscription, u will be bloqued by *paywalls*.
+
+- "member": when u have a subscription to *ORCID*, all is accessible for you.
+
+The big difference with other *API*s is that *ORCID* requires an
+authentication even for the *public* way. It is needed to get a **client-id**
+and a **client-secret**.
+
+I don't want to authenticate myself. It will ask a mail and I don't know which
+mail provide.
+That's why I will use their so called
+[***OrcidScrapper***](https://pypi.org/project/PyOrcid/#access-through-orcidscrapper-feature-of-pyorcid)
+that does not require any authentication. It's an alternative to *ORCID API*
+that just gives access to the *public* features. **OrcidScrapper can access
+all methods of Orcid class as it is inherited from it.**
+
+To get the metadata about an author, it is needed to find the *orcid-id*
+related to the author.
+
+I assume that *Crossref* and *SemanticScholar* could help finding this
+*orcid-id*.
+
+
 ### EOF
 
