@@ -388,7 +388,7 @@ It could solve the issue of *not finding the abstract* with *Crossref*?
 Anyway, I just need *Scopus* to give me a correlation between an author
 and his *ORCID* id.
 
-*Scopus* has its own *ID* for each authors because their are sometimes
+*Scopus* has its own *ID* for each authors because there are sometimes
 authors with the same name,
 [***this article***](https://service.elsevier.com/app/answers/detail/a_id/11212/c/10546/supporthub/scopus/)
 says.
@@ -514,17 +514,18 @@ of publications that have been retracted, comparing to other databases,
 [***right here***](https://link.springer.com/article/10.1007/s11192-024-05034-y).
 *OpenAlex* has "an important coverage documents without DOI", but it is still
 less than *The Lens* or *World of Science*.
-Besides, "OpenAlex collects more papers on its own than and Dimensions together."
+Besides, "OpenAlex collects more papers on its own than 
+Dimensions and Scopus together."
 This article strongly recommends to cross the results between multiple
 databases to ensure their authenticity, it recommends the use of *Zotero*.
 
 *OpenAlex* is based on *Crossref*, *ORCID*, making it available for free,
 and gathering around **263 Million works** with more than **100,000
-institutions** in 2025.
+institutions** covered in 2025.
 
-The *Sorbonne University* replaces *Web of Science* by *OpenAlex*
+The *Sorbonne University* replaced *Web of Science* by *OpenAlex*
 in 2023.
-The *CNRS* maybe wants to use *OpenAlex*, to replace *Scopus*, in the next
+The *CNRS* may want to use *OpenAlex*, to replace *Scopus*, in the next
 years, according to
 [***Frédérique Bordignon***](https://carnetist.hypotheses.org/2182).
 The *MESR* established a partnership with *OpenAlex* in 2024, providing
@@ -537,7 +538,7 @@ says.
 As a developer, *OpenAlex* is the *Saint Graal*,
 [***right here***](https://github.com/J535D165/pyalex).
 The *Python* client for the *API* is well documented, with a lot of stars,
-and has a *MIT License*. Besides, no authentication is needed!
+and has an *MIT License*. Besides, no authentication is needed!
 It is possible to only use *OpenAlex* because it is internally using
 *Crossref* and *ORCID*.
 
