@@ -332,6 +332,13 @@ The limit for this **OrcidScrapper** *API* is:
 [***this article***](https://info.orcid.org/ufaqs/what-are-the-api-limits/)
 says.
 
+
+__Edit__: Even for the *Public API*, a "laisser-passer" is required,
+[***this article***](https://orcid-france.fr/espace-api/en-pratique/)
+says.
+
+I think *ORCID* is not a good thing to use.
+
 ## How to use the IDREF tool
 
 *ORCID* requires an *orcid-id* to find the author, which could not be found
@@ -435,9 +442,480 @@ this doc
 explains how to use *scopus*, it requires a specific configuration file
 and an *API* key. The official documentation is actually very bad.
 
-### TODO
 
-https://link.springer.com/article/10.1007/s11192-024-05073-5
+__Edit__: *Scopus* is **shit**. It needs an *API key* linked to an
+organization.
+
+### Comparison of the efficiency of Crossref against others
+
+This article
+[***right here***](https://link.springer.com/article/10.1007/s11192-024-05073-5)
+compares how *World of Science*, *Scopus* are better
+than *Crossref*.
+
+### Final words
+
+There are *paywalls* and *copyrights* everywhere.
+As a developer it is impossible to get the data I need.
+
+This article
+[***right here***](https://www.servicescape.com/blog/open-access-vs-paywalls-new-paradigms-in-academic-publishing)
+says that **Academia Edu** and **ResearchGate** could bypass the paywalls.
+I will try to explore those paths.
+
+
+For instance, **ResearchGate** does not have an *API*, and even its
+*term of services* are explicitely clear about *scrapping* and *crawling*,
+[***this article***](https://www.researchgate.net/post/API_on_ResearchGatenet)
+says.
+
+
+**Academia Edu** does not seem to have an *API* either.
+
+## Edit July, 08 2025: OPENALEX
+
+The goal of finding the author affiliations and the abstracts can be solved
+with just one simple tool, released in 2022.
+
+The main issues are the *paywalls* and the *copyrights*.
+It is possible to bypass them by using *ORCID* or *SCOPUS* but
+they require an *API Key* related to an *Institution*, which
+I could ask for but I don't want to.
+
+Released in 2022, [***OpenAlex***](https://openalex.org/) is a bibliographic
+catalogue of scientific papers, authors and institutions accessible in
+**open access** mode, named after the **Library of Alexandria**,
+[***wikipedia***](https://en.wikipedia.org/wiki/OpenAlex) says.
+
+The company behind it is [***Our Research***](https://ourresearch.org/team)
+from *Canada*. It is the same company behind **Unpaywall**,
+which is a browser extension that finds legal free versions of scholarly
+articles (around 49 million free articles in 2024). *Unpaywall* has been
+integrated to *World of Science* and *Scopus* in 2017,
+[***wikipedia***](https://en.wikipedia.org/wiki/OurResearch) says.
+
+The big asset of *OpenAlex* is that **it is a non for profit organization**,
+providing a fully access **based on a Creative Commons Zero license**,
+[***this article***](https://help.openalex.org/hc/en-us/articles/27190301279127-What-content-does-OpenAlex-include-and-how-does-it-compare-to-other-databases)
+says.
+Remember
+[**Aaron Swartz**](https://creativecommons.org/2013/01/12/remembering-aaron-swartz/).
+
+According to [***Frédérique Bordignon***](https://carnetist.hypotheses.org/2182),
+*OpenAlex* covered in 2023 a huge amount of research papers,
+a lot more than *World of Science* and *Scopus*, but less than *Google Scholar*.
+This article also provides a criticism about the authenticity of the metadata
+provided by *OpenAlex*, mostly on the author affiliations which are resulting
+of bad translations to english, or a bad management of acronyms, or merely
+wrong inputs by the authors themselves.
+
+Indeed, *OpenAlex* is still young, here is some graphs on the proportion
+of publications that have been retracted, comparing to other databases,
+[***right here***](https://link.springer.com/article/10.1007/s11192-024-05034-y).
+*OpenAlex* has "an important coverage documents without DOI", but it is still
+less than *The Lens* or *World of Science*.
+Besides, "OpenAlex collects more papers on its own than and Dimensions together."
+This article strongly recommends to cross the results between multiple
+databases to ensure their authenticity, it recommends the use of *Zotero*.
+
+*OpenAlex* is based on *Crossref*, *ORCID*, making it available for free,
+and gathering around **263 Million works** with more than **100,000
+institutions** in 2025.
+
+The *Sorbonne University* replaces *Web of Science* by *OpenAlex*
+in 2023.
+The *CNRS* maybe wants to use *OpenAlex*, to replace *Scopus*, in the next
+years, according to
+[***Frédérique Bordignon***](https://carnetist.hypotheses.org/2182).
+The *MESR* established a partnership with *OpenAlex* in 2024, providing
+financial assistance.
+The *French Ministry of Research and Higher Education* pledged to contribute
+financially to the project, considering it "as a crucial open science
+infrastructure", [***Wikipedia***](https://en.wikipedia.org/wiki/OpenAlex)
+says.
+
+As a developer, *OpenAlex* is the *Saint Graal*,
+[***right here***](https://github.com/J535D165/pyalex).
+The *Python* client for the *API* is well documented, with a lot of stars,
+and has a *MIT License*. Besides, no authentication is needed!
+It is possible to only use *OpenAlex* because it is internally using
+*Crossref* and *ORCID*.
+
+For instance, a strong feature of *OpenAlex* is its capability to provide
+keywords on a publication abstract. Sometimes, abstracts are protected
+by copyrights, and *Crossref* can't access to them. *OpenAlex* provides
+*keywords* related to the *ngrams of the abstract*, storing not only the
+word but also its position in the text, letting us to bypass the copyright
+by reconstructing the abstract, called an *abstract on the fly*, which is
+a rewritten version of the original abstract,
+[***right here***](https://github.com/J535D165/pyalex#get-abstract).
+
+Example right here:
+
+```python
+{
+  'doi' : 'https://doi.org/10.1109/vtc2023-spring57618.2023.10199400',
+  'title' :
+      'DRL-Based RAT Selection in a Hybrid Vehicular Communication Network',
+  'publication_date' : '2023-06-01',
+  'primary_topic' : {
+    'id' : 'https://openalex.org/T10761',
+    'display_name' : 'Vehicular Ad Hoc Networks (VANETs)',
+    'score' : 0.9998,
+    'subfield' : {
+      'id' : 'https://openalex.org/subfields/2208',
+      'display_name' : 'Electrical and Electronic Engineering'
+    },
+    'field' : {
+      'id' : 'https://openalex.org/fields/22',
+      'display_name' : 'Engineering'
+    },
+    'domain' : {
+      'id' : 'https://openalex.org/domains/3',
+      'display_name' : 'Physical Sciences'
+    }
+  },
+  'topics' : [
+    {
+      'id' : 'https://openalex.org/T10761',
+      'display_name' : 'Vehicular Ad Hoc Networks (VANETs)',
+      'score' : 0.9998,
+      'subfield' : {
+        'id' : 'https://openalex.org/subfields/2208',
+        'display_name' : 'Electrical and Electronic Engineering'
+      },
+      'field' : {
+        'id' : 'https://openalex.org/fields/22',
+        'display_name' : 'Engineering'
+      },
+      'domain' : {
+        'id' : 'https://openalex.org/domains/3',
+        'display_name' : 'Physical Sciences'
+      }
+    },
+    {
+      'id' : 'https://openalex.org/T11099',
+      'display_name' : 'Autonomous Vehicle Technology and Safety',
+      'score' : 0.9788,
+      'subfield' : {
+        'id' : 'https://openalex.org/subfields/2203',
+        'display_name' : 'Automotive Engineering'
+      },
+      'field' : {
+        'id' : 'https://openalex.org/fields/22',
+        'display_name' : 'Engineering'
+      },
+      'domain' : {
+        'id' : 'https://openalex.org/domains/3',
+        'display_name' : 'Physical Sciences'
+      }
+    },
+    {
+      'id' : 'https://openalex.org/T10524',
+      'display_name' : 'Traffic control and management',
+      'score' : 0.9633,
+      'subfield' : {
+        'id' : 'https://openalex.org/subfields/2207',
+        'display_name' : 'Control and Systems Engineering'
+      },
+      'field' : {
+        'id' : 'https://openalex.org/fields/22',
+        'display_name' : 'Engineering'
+      },
+      'domain' : {
+        'id' : 'https://openalex.org/domains/3',
+        'display_name' : 'Physical Sciences'
+      }
+    }
+  ],
+  'keywords' : [],
+  'concepts' : [
+    {
+      'id' : 'https://openalex.org/C41008148',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q21198',
+      'display_name' : 'Computer science',
+      'level' : 0,
+      'score' : 0.7734215
+    },
+    {
+      'id' : 'https://openalex.org/C43214815',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q7310987',
+      'display_name' : 'Reliability (semiconductor)',
+      'level' : 3,
+      'score' : 0.5840638
+    },
+    {
+      'id' : 'https://openalex.org/C48044578',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q727490',
+      'display_name' : 'Scalability',
+      'level' : 2,
+      'score' : 0.5217869
+    },
+    {
+      'id' : 'https://openalex.org/C97541855',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q830687',
+      'display_name' : 'Reinforcement learning',
+      'level' : 2,
+      'score' : 0.5155418
+    },
+    {
+      'id' : 'https://openalex.org/C120314980',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q180634',
+      'display_name' : 'Distributed computing',
+      'level' : 1,
+      'score' : 0.49229825
+    },
+    {
+      'id' : 'https://openalex.org/C31258907',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q1301371',
+      'display_name' : 'Computer network',
+      'level' : 1,
+      'score' : 0.45947522
+    },
+    {
+      'id' : 'https://openalex.org/C192448918',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q682677',
+      'display_name' : 'Vehicular ad hoc network',
+      'level' : 4,
+      'score' : 0.45362726
+    },
+    {
+      'id' : 'https://openalex.org/C158379750',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q214111',
+      'display_name' : 'Network packet',
+      'level' : 2,
+      'score' : 0.44738722
+    },
+    {
+      'id' : 'https://openalex.org/C47796450',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q508378',
+      'display_name' : 'Intelligent transportation system',
+      'level' : 2,
+      'score' : 0.42497796
+    },
+    {
+      'id' : 'https://openalex.org/C555944384',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q249',
+      'display_name' : 'Wireless',
+      'level' : 2,
+      'score' : 0.2760596
+    },
+    {
+      'id' : 'https://openalex.org/C127413603',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q11023',
+      'display_name' : 'Engineering',
+      'level' : 0,
+      'score' : 0.19744387
+    },
+    {
+      'id' : 'https://openalex.org/C94523657',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q4085781',
+      'display_name' : 'Wireless ad hoc network',
+      'level' : 3,
+      'score' : 0.17525944
+    },
+    {
+      'id' : 'https://openalex.org/C154945302',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q11660',
+      'display_name' : 'Artificial intelligence',
+      'level' : 1,
+      'score' : 0.11538404
+    },
+    {
+      'id' : 'https://openalex.org/C22212356',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q775325',
+      'display_name' : 'Transport engineering',
+      'level' : 1,
+      'score' : 0.10022694
+    },
+    {
+      'id' : 'https://openalex.org/C76155785',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q418',
+      'display_name' : 'Telecommunications',
+      'level' : 1,
+      'score' : 0.08261272
+    },
+    {
+      'id' : 'https://openalex.org/C163258240',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q25342',
+      'display_name' : 'Power (physics)',
+      'level' : 2,
+      'score' : 0.0
+    },
+    {
+      'id' : 'https://openalex.org/C121332964',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q413',
+      'display_name' : 'Physics',
+      'level' : 0,
+      'score' : 0.0
+    },
+    {
+      'id' : 'https://openalex.org/C62520636',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q944',
+      'display_name' : 'Quantum mechanics',
+      'level' : 1,
+      'score' : 0.0
+    },
+    {
+      'id' : 'https://openalex.org/C77088390',
+      'wikidata' : 'https://www.wikidata.org/wiki/Q8513',
+      'display_name' : 'Database',
+      'level' : 1,
+      'score' : 0.0
+    }
+  ],
+  'sustainable_development_goals' : [ {
+    'score' : 0.48,
+    'display_name' : 'Decent work and economic growth',
+    'id' : 'https://metadata.un.org/sdg/8'
+  } ],
+  'abstract_inverted_index' : {
+    'Cooperative' : [0],
+    'intelligent' : [1],
+    'transport' : [2],
+    'systems' : [3],
+    'rely' : [4],
+    'on' : [ 5, 33, 106 ],
+    'a' : [ 6, 34, 100 ],
+    'set' : [7],
+    'of' : [ 8, 37, 84, 94, 176 ],
+    'Vehicle-to-Everything' : [9],
+    '(V2X)' : [10],
+    'applications' : [ 11, 19, 31 ],
+    'to' : [ 12, 90, 111, 145, 154, 157 ],
+    'enhance' : [ 13, 146 ],
+    'road' : [14],
+    'safety.' : [15],
+    'Emerging' : [16],
+    'new' : [17],
+    'V2X' : [ 18, 53 ],
+    'like' : [20],
+    'Advanced' : [21],
+    'Driver' : [22],
+    'Assistance' : [23],
+    'Systems' : [24],
+    '(ADASs)' : [25],
+    'and' : [ 26, 40, 48, 59, 164 ],
+    'Connected' : [27],
+    'Autonomous' : [28],
+    'Driving' : [29],
+    '(CAD)' : [30],
+    'depend' : [32],
+    'significant' : [35],
+    'amount' : [36],
+    'shared' : [38],
+    'data' : [39],
+    'require' : [41],
+    'high' : [ 42, 49, 131 ],
+    'reliability,' : [43],
+    'low' : [44],
+    'end-to-end' : [45],
+    '(E2E)' : [46],
+    'latency,' : [47],
+    'throughput.' : [50],
+    'However,' : [51],
+    'present' : [52],
+    'communication' : [ 54, 78, 101, 140, 179 ],
+    'technologies' : [55],
+    'such' : [56],
+    'as' : [57],
+    'ITS-G5' : [58],
+    'C-V2X' : [60],
+    '(Cellular' : [61],
+    'V2X)' : [62],
+    'cannot' : [63],
+    'satisfy' : [64],
+    'these' : [ 65, 95 ],
+    'requirements' : [66],
+    'alone.' : [67],
+    'In' : [68],
+    'this' : [69],
+    'paper,' : [70],
+    'we' : [ 71, 98, 121 ],
+    'propose' : [ 72, 99 ],
+    'an' : [73],
+    'intelligent,' : [74],
+    'scalable' : [75],
+    'hybrid' : [ 76, 138 ],
+    'vehicular' : [ 77, 139 ],
+    'architecture' : [ 79, 141 ],
+    'that' : [ 80, 129, 136 ],
+    'leverages' : [81],
+    'the' : [ 82, 92, 113, 126, 137, 143, 147, 159, 165, 174, 177 ],
+    'performance' : [83],
+    'multiple' : [85],
+    'Radio' : [86],
+    'Access' : [87],
+    'Technologies' : [88],
+    '(RATs)' : [89],
+    'meet' : [91],
+    'needs' : [93],
+    'applications.' : [96],
+    'Then,' : [97],
+    'mode' : [ 102, 180 ],
+    'selection' : [ 103, 162, 169 ],
+    'algorithm' : [104],
+    'based' : [105],
+    'Deep' : [107],
+    'Reinforcement' : [108],
+    'Learning' : [109],
+    '(DRL)' : [110],
+    'maximize' : [112],
+    "network's" : [114],
+    'reliability' : [115],
+    'while' : [116],
+    'limiting' : [117],
+    'resource' : [ 118, 184 ],
+    'consumption.' : [119],
+    'Finally,' : [120],
+    'assess' : [122],
+    'our' : [123],
+    'work' : [124],
+    'using' : [125],
+    'platooning' : [127],
+    'scenario' : [128],
+    'requires' : [130],
+    'reliability.' : [132],
+    'Numerical' : [133],
+    'results' : [134],
+    'reveal' : [135],
+    'has' : [142],
+    'potential' : [144],
+    'packet' : [148],
+    'reception' : [149],
+    'rate' : [150],
+    '(PRR)' : [151],
+    'by' : [ 152, 181 ],
+    'up' : [153],
+    '30%' : [155],
+    'compared' : [156],
+    'both' : [158],
+    'static' : [160],
+    'RAT' : [161],
+    'strategy' : [163],
+    'multi-criteria' : [166],
+    'decision-making' : [167],
+    '(MCDM)' : [168],
+    'algorithm.' : [170],
+    'Additionally,' : [171],
+    'it' : [172],
+    'improves' : [173],
+    'efficiency' : [175],
+    'redundant' : [178],
+    '20%' : [182],
+    'regarding' : [183],
+    'consumption' : [185]
+  },
+}
+```
+
+It also provides a wide range of topics (in the example above)
+with the given score precision,
+related to the publication itself, which is inspiring me for the
+classification to use **an automated multi-tag hierarchical classifier**,
+[***right here***](https://github.com/Tencent/NeuralNLP-NeuralClassifier),
+or
+[***right here***](https://github.com/RandolphVI/Hierarchical-Multi-Label-Text-Classification).
 
 ### EOF
 
