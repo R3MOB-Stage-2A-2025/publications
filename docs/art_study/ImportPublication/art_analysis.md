@@ -198,7 +198,22 @@ I assume that all this searching part should be done on the *server side*.
 
 Besides, it could be possible to retrieve very cool analytics from
 *Semantic Scholar* *API*, such as **themes**,
-and even **AI-generated topics and subthemes**.
+and even **AI-generated topics and subthemes and Tldr**.
+
+__Edit__: The only *Python* client of *SemanticScholar* is not usable.
+Indeed, it is using **nested event loops with net_asyncio** and it is just
+bloquing *flask-socketio* from *emit()ting* any event.
+Even if I use `semanticscholar.SemanticScholar()` in another thread,
+it is bloquing the thread.
+In their *issue*
+[***right here***](https://github.com/danielnsilva/semanticscholar/issues/101)
+the developer of the client is explaining that **net_asyncio should be replaced
+or removed due to lack of maintenance**.
+1 year after this issue was created, nothing changed.
+
+It is impossible to use the current version of this client.
+It is the only *Python* client usable for *Semantic Scholar*,
+so I can't use *Semantic Scholar. (o m g)
 
 ## How to use the Crossref tool
 
